@@ -9,7 +9,7 @@ nexus-data:
 nexus:
   image: sonatype/nexus3
   volumes_from:
-  - nexus-data
+    - nexus-data:rw
   ports:
     - "8081:8081"
   labels:
