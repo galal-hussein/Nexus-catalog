@@ -8,6 +8,10 @@ nexus-data:
     - /nexus-data
 nexus:
   image: sonatype/nexus3
+  environment:
+    - JAVA_MAX_MEM=${JAVA_MAX_MEM}
+    - JAVA_MIN_MEM=${JAVA_MIN_MEM}
+    - EXTRA_JAVA_OPTS=${EXTRA_JAVA_OPTS}
   volumes_from:
     - nexus-data
   ports:

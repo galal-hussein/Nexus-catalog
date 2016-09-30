@@ -2,3 +2,22 @@
   name: "Nexus"
   version: "v3"
   description: "Nexus Repository Manager based on CentOS"
+  questions:
+    - variable: JAVA_MAX_MEM
+      description: "JVM maximum memory"
+      label: "JAVA MAX MEM"
+      type: "string"
+      required: true
+      default: "1200m"
+    - variable: JAVA_MIN_MEM
+      description: "JVM minimum memory"
+      label: "JAVA MIN MEM"
+      type: "string"
+      required: true
+      default: "1200m"
+    - variable: EXTRA_JAVA_OPTS
+      description: "JVM extra options"
+      label: "JAVA EXTRA OPTS"
+      type: "string"
+      required: false
+      default: ""
