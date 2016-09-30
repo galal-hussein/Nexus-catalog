@@ -6,8 +6,13 @@ nexus:
   - "8081:8081"
   labels:
     io.rancher.sidekicks: nexus-data
+    io.rancher.container.hostname_override: container_name
 nexus-data:
   image: alpine:latest
   tty: true
+  labels:
+    io.rancher.container.start_once: true
+    io.rancher.container.hostname_override: container_name
+  entrypoint: /bin/true
   volumes:
   - /nexus-data
